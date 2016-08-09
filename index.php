@@ -5,28 +5,29 @@
 $output=<<<EOF
 <html>
     <head>
-        //<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
         <script type="text/javascript" src="jquery-3.1.0.min.js" defer></script>
     </head>
     <body>
-        <div class="container-fluid">
+        <header>Manga Reader Beta For: <a href="http://kamitranslation.com">KamiTranslation</a></header
+        <div class="container">
             <div class="container reader-header" id="reader-header">
                 <div class="row">
                     <div class="col-md-4">
-                        <select id="manga-select" name="manga-select">
+                        <select class="selectpicker" id="manga-select" name="manga-select">
                             <option value="default" selected>Choose a Manga:</option>
                             <option value="manga_22rdsd">Some Manga Name</option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select id="chapter-select" name="chapter-select">
+                        <select class="selectpicker" id="chapter-select" name="chapter-select">
                             <option value="default" selected>Choose a Chapter....</option>
                             <option value="manga_22rdsd">Some Chapter Name</option>
                         </select>
                     </div>
                     <div class="col-md-4">
-                        <select id="page-select" name="page-select">
+                        <select class="selectpicker" id="page-select" name="page-select">
 EOF;
         for($i=1;$i<=count($files);$i++)
         {
@@ -59,6 +60,10 @@ $output.=<<<EOF
     </body>
 </html>
 <style>
+    body
+    {
+        background-color:rgb(204, 255, 204);
+    }
     .reader-header
     {
         padding:20px 0px;

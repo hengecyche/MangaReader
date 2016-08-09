@@ -1,0 +1,132 @@
+<html>
+
+    <head>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <div class="body-header">
+            <header>mangareader:BETA</header>
+        </div>
+        <div class="user-custom-container box-shadow-magenta">
+            <div class="partition-selector centered-element row">
+                <div class="select-container col-md-2 col-lg-2">
+                    <select class="form-control centered-element" id="manga-selector">
+                        <option selected="selected">Select Manga:</option> 
+                        <option value="manga1">Manga 1</option>
+                        <option value="manga1">Manga 2</option>
+                        <option value="manga1">Manga 3</option>
+                    </select>
+                </div>
+                <div class="select-container col-md-2 col-lg-2">
+                    <select class="form-control centered-element" id="chapter-selector">
+                        <option selected="selected">Select Chapter:</option> 
+                        <option value="chap1">Chapter 1</option>
+                        <option value="chap1">Chapter 2</option>
+                        <option value="chap1">Chapter 3</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row centered-element">
+            <div class="main-reader-container centered-element">
+                    <div id="manga-single-page-view-template">
+                        <div class="manga-viewer-container centered-element">
+                            <img class="main-view-image" src="mangaFiles/non_non/Non%20Non%20Biyori%20Chapter%2034%20Page%2010.jpg">
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+    </body>
+    
+<style>
+    /*Manga Reader View Styling*/
+    .main-reader-container
+    {
+        width:50%;
+        z-index:-100;
+    }
+    
+    .manga-viewer-container
+    {
+        width:66.67%;
+    }
+    
+    img.main-view-image
+    {
+        width:100%;    
+    }
+    
+    html,
+    body,
+    .body-header
+    {
+        width:100%;
+    }
+    
+    .body-header
+    {
+        height:60px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#31f773+0,01a001+100 */
+        background: #31f773; /* Old browsers */
+        background: -moz-linear-gradient(top,  #31f773 0%, #01a001 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #31f773 0%,#01a001 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #31f773 0%,#01a001 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#31f773', endColorstr='#01a001',GradientType=0 ); /* IE6-9 */
+
+    }
+    body
+    {
+        background:#aaa;
+    }
+    
+    /*Particular Styling For Particular Element*/
+    .user-custom-container
+    {
+        margin-top:4px;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f73169+0,e80288+100 */
+        background: #f73169; /* Old browsers */
+        background: -moz-linear-gradient(top,  #f73169 0%, #e80288 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #f73169 0%,#e80288 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #f73169 0%,#e80288 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f73169', endColorstr='#e80288',GradientType=0 ); /* IE6-9 */
+    }
+    .partition-selector
+    {
+        width:90%;
+    }
+    
+    /*Grouped Styles*/
+    .child-centered
+    {
+        text-align: center;
+    }
+
+    .centered-element
+    {
+        display: block;
+        margin:0 auto;
+    }
+    
+    .box-shadow-magenta
+    {
+        padding:10px 0px;
+        -webkit-box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
+        -moz-box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
+        box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
+    }
+    
+    
+</style>
+    
+
+</html>
