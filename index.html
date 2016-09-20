@@ -15,6 +15,7 @@
         <div class="body-header">
             <img src="mangareader_logo6.svg" width="200px" height="auto">
         </div>
+        
         <div class="user-custom-container box-shadow-magenta">
             <div class="partition-selector centered-element row">
                 <div class="select-container col-md-2 col-lg-2">
@@ -25,6 +26,7 @@
                         <option value="manga1">Manga 3</option>
                     </select>
                 </div>
+                
                 <div class="select-container col-md-2 col-lg-2">
                     <select class="form-control centered-element" id="chapter-selector">
                         <option selected="selected">Select Chapter:</option> 
@@ -36,32 +38,98 @@
             </div>
         </div>
 
-        <div class="row centered-element">
-            <div class="main-reader-container centered-element">
-                    <div id="manga-single-page-view-template">
-                        <div class="manga-viewer-container centered-element">
-                            <img class="main-view-image" src="mangaFiles/non_non/Non%20Non%20Biyori%20Chapter%2034%20Page%2010.jpg">
-                        </div>
-                    </div>
+        <div class="main-reader-container centered-element">
+            <div class="manga-viewer-container centered-element">
+                <img id="main-manga-image" class="user-interact main-view-image full-width" src="mangaFiles/non_non/Non%20Non%20Biyori%20Chapter%2034%20Page%2010.jpg">
+                <img class="user-interact manga-viewer-nav-button prev-nav user-interact default-hidden" src="images/app_files/111286-icon-works/svg/left-arrow.svg">
+                <img class="user-interact manga-viewer-nav-button next-nav user-interact default-hidden" src="images/app_files/111286-icon-works/svg/right-arrow.svg">
             </div>
         </div>
         
+        <div class="user-custom-container">
+            <div class="nav-bar centered-element row">
+                <div class="nav-bar-item col-md-2 col-lg-2">
+                    <select class="form-control centered-element" id="page-selector">
+                        <option selected="selected">Page 1</option>
+                        <option>Page 2</option>
+                        <option>Page 3</option>
+                        <option>Page 4</option>
+                        <option>Page 5</option>
+                    </select>
+                </div>
+                <div class="nav-bar-item col-md-1 col-lg-1">
+                    <!--HOLLOW AREAD -->
+                </div>
+                <div class="nav-bar-item col-md-6 col-lg-6">
+                    <div class="navigation row">
+                        <div class="col-md-4 col-lg-4">
+                            <img class="prev-nav user-interact centered-element nav-bar-button" src="images/app_files/111286-icon-works/svg/left-arrow.svg">
+                        </div>
+                        <div class="col-md-4 col-lg-4 page-stat">
+                            <p class="stat-text centered-element">1 / 20</p>
+                        </div>
+                        <div class="col-md-4 col-lg-4" >
+                            <img class="next-nav user-interact centered-element nav-bar-button" src="images/app_files/111286-icon-works/svg/right-arrow.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="mangareader.js" type="application/javascript"></script>
     </body>
     
 <style>
+    *:not(style):not(script){
+        position: relative;
+        display:block;
+    }
+    /*Manga Viewer Container NAV*/
+    .manga-viewer-nav-button
+    {
+        position:absolute;
+        width:7%;
+    }
+    
+    .manga-viewer-nav-button:hover
+    {
+        fill:red;
+    }
+    
+    .manga-viewer-nav-button.prev-nav
+    {
+        top:50%;
+        left:3%;
+    }
+    
+    .manga-viewer-nav-button.next-nav
+    {
+        top:50%;
+        right:3%;
+    }
+    
+    .stat-text
+    {
+        font-size:1.8em;
+        text-align: center;
+    }
+    .user-interact
+    {
+        cursor:pointer;
+    }
+
     /*Manga Reader View Styling*/
     .main-reader-container
     {
         width:50%;
-        z-index:-100;
+        z-index:100;
     }
     
     .manga-viewer-container
     {
-        width:66.67%;
+        width:60%;
     }
     
-    img.main-view-image
+    .full-width
     {
         width:100%;    
     }
@@ -92,7 +160,7 @@
     /*Particular Styling For Particular Element*/
     .user-custom-container
     {
-        margin-top:4px;
+        padding:10px 0px;
         /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f73169+0,e80288+100 */
         background: #f73169; /* Old browsers */
         background: -moz-linear-gradient(top,  #f73169 0%, #e80288 100%); /* FF3.6-15 */
@@ -103,6 +171,18 @@
     .partition-selector
     {
         width:90%;
+    }
+    
+    /*NAV BAR*/
+    #page-selector
+    {
+        width:40%;
+    }
+    
+    .nav-bar-button
+    {
+        width:12%;
+        height:auto;
     }
     
     /*Grouped Styles*/
@@ -119,11 +199,11 @@
     
     .box-shadow-magenta
     {
-        padding:10px 0px;
         -webkit-box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
         -moz-box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
         box-shadow: -1px 7px 5px -4px rgba(46,46,46,0.63);
     }
+    
     
     
 </style>
